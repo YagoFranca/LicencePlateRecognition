@@ -1,7 +1,0 @@
-python predictWithOCR.py model='best.pt' source='demo.mp4'
-
-source='demo.mp4'
-
-source='image.jpg'
-
-source=0 => webcam

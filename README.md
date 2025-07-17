@@ -1,25 +1,31 @@
-# Licence Plate Detection and Recognition using YOLOv8 + EasyOCR
 
-This project performs **vehicle license plate detection and recognition** using the **YOLOv8** model and the **EasyOCR** library.
+# 🧠 OCR Prediction with YOLO Model
+
+Este projeto utiliza um modelo treinado com YOLO (`best.pt`) para realizar detecção e reconhecimento de texto em imagens, vídeos ou webcam. O script principal (`predictWithOCR.py`) permite passar diferentes fontes de entrada via linha de comando.
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 Como Executar
 
-Run the following command in your terminal:
+Execute o script com a seguinte sintaxe:
 
 ```bash
 python predictWithOCR.py model='best.pt' source='<input>'
+```
 
-| Input Type | Example              | Description               |
-| ---------- | -------------------- | ------------------------- |
-| 🎥 Video   | `source='demo.mp4'`  | Use a video file as input |
-| 🖼️ Image  | `source='image.jpg'` | Use a single image file   |
-| 📷 Webcam  | `source=0`           | Use your device's webcam  |
+### Exemplos de Uso
 
+| Tipo de Entrada | Exemplo               | Descrição                    |
+|-----------------|-----------------------|------------------------------|
+| 🎥 Vídeo        | `source='demo.mp4'`   | Usa um arquivo de vídeo      |
+| 🖼️ Imagem       | `source='image.jpg'`  | Usa uma única imagem         |
+| 📷 Webcam       | `source=0`            | Usa a webcam do dispositivo  |
 
-📁 Expected Project Structure
+---
 
+## 📁 Estrutura Esperada do Projeto
+
+```
 project/
 ├── predictWithOCR.py
 ├── best.pt
@@ -28,4 +34,33 @@ project/
 │       └── image.jpg
 ├── runs/
 │   └── detect/
-│       └── ...
+│       └── ... (resultados salvos)
+```
+
+---
+
+## 📦 Requisitos
+
+Crie um ambiente virtual e instale as dependências (exemplo com pip):
+
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+# ou
+source venv/bin/activate  # Linux/Mac
+
+pip install -r requirements.txt
+```
+
+---
+
+## 📝 Notas
+
+- O arquivo `best.pt` deve conter o modelo YOLO treinado para detecção OCR.
+- Os resultados serão salvos automaticamente dentro da pasta `runs/detect/`.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Yago de Souza França**
